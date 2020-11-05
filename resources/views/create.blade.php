@@ -91,12 +91,12 @@
                 </div>
             </div>
         <div class="col-md-2"></div>
-        <!--OBTUVIMOS LA API DE BANXICO CON JAVASCRIPT POR COMODIDDAD <script src="../../resources/assets/js/dolares.js"></script>-->
         <script>
             function obdl() {
                 var pesos = $("#salarioPesos").val();
                 $("#salarioDolares");
-                var fecha = "2020-11-04";
+                var f = new Date();
+                var fecha = f.getFullYear() + "-" + (f.getMonth()+1) + "-" + (f.getDay()+1);
                 $.ajax({
                     url : "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/"+fecha+"/"+fecha+"?token=0fce7d85c76c9afa6f8ef05f95d50a11c62573c637d28706e28f2a81e84264e5",
                     jsonp : "callback",
