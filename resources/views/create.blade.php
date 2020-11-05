@@ -119,7 +119,7 @@
             function obpe() {
                 var dolares = $("#salarioDolares").val();
                 var f = new Date();
-                var fecha = document.write(f.getFullYer() + "/" + (f.getMonth() +1) + "/" + f.getDay());
+                var fecha = f.getFullYear() + "-" + (f.getMonth()+1) + "-" + (f.getDay()+1);
                 $.ajax({
                     url : "https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/"+fecha+"/"+fecha+"?token=0fce7d85c76c9afa6f8ef05f95d50a11c62573c637d28706e28f2a81e84264e5",
                     jsonp : "callback",
